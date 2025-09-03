@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Blood Request Center | R•N ResQ - Urgent Blood Support</title>
+    <meta name="description" content="Submit urgent blood requests with real-time donor matching. Get immediate support for medical emergencies with our 24/7 emergency blood request system." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Frnresq1902back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background font-inter">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-medical sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-10 w-auto" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" fill="#DC2626" opacity="0.1"/>
+                            <path d="M12 20L18 14L24 20L18 26L12 20Z" fill="#DC2626"/>
+                            <path d="M16 16H20V24H16V16Z" fill="white"/>
+                            <path d="M14 18H22V22H14V18Z" fill="white"/>
+                            <text x="35" y="16" font-family="Inter" font-weight="700" font-size="14" fill="#DC2626">R•N</text>
+                            <text x="35" y="30" font-family="Inter" font-weight="600" font-size="12" fill="#1E40AF">ResQ</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage_emergency_blood_search_hub.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="donor_registration_dashboard.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Become Donor</a>
+                        <a href="emergency_blood_request_center.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">Request Blood</a>
+                        <a href="hospital_blood_bank_portal.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Hospital Portal</a>
+                        <a href="medical_resource_education_center.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Resources</a>
+                        <a href="location_intelligence_blood_availability_map.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Blood Map</a>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:+911800123456" class="bg-primary text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-primary-700 transition-medical-fast flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        Emergency: 1800-123-456
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary transition-medical-fast" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-border">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage_emergency_blood_search_hub.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="donor_registration_dashboard.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Become Donor</a>
+                <a href="emergency_blood_request_center.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">Request Blood</a>
+                <a href="hospital_blood_bank_portal.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Hospital Portal</a>
+                <a href="medical_resource_education_center.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Resources</a>
+                <a href="location_intelligence_blood_availability_map.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Blood Map</a>
+                <a href="tel:+911800123456" class="bg-primary text-white block px-3 py-2 rounded-md text-base font-semibold mt-4">Emergency: 1800-123-456</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Emergency Alert Banner -->
+    <div class="bg-primary-50 border-l-4 border-primary py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center">
+                <div class="flex-shrink-0">
+                    <svg class="h-5 w-5 text-primary animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="ml-3">
+                    <p class="text-sm text-primary font-medium">
+                        <strong>Emergency Support Available 24/7</strong> - Our medical team is standing by to assist with urgent blood requests. Response time: &lt; 15 minutes.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 via-white to-surface py-12 lg:py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h1 class="text-3xl lg:text-5xl font-bold text-text-primary mb-4">
+                    Emergency Blood Request
+                </h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    We understand this is a difficult time. Our compassionate team is here to help you find the blood you need quickly and safely. You're not alone in this journey.
+                </p>
+            </div>
+
+            <!-- Quick Stats for Reassurance -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                <div class="text-center">
+                    <div class="impact-counter text-accent-600 mb-2">< 15 min</div>
+                    <div class="text-sm text-text-secondary font-medium">Average Response Time</div>
+                </div>
+                <div class="text-center">
+                    <div class="impact-counter text-secondary mb-2">94%</div>
+                    <div class="text-sm text-text-secondary font-medium">Success Rate</div>
+                </div>
+                <div class="text-center">
+                    <div class="impact-counter text-primary mb-2">24/7</div>
+                    <div class="text-sm text-text-secondary font-medium">Support Available</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Emergency Request Form -->
+                <div class="lg:col-span-2">
+                    <div class="card-medical p-8">
+                        <div class="flex items-center mb-6">
+                            <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-4">
+                                <svg class="w-6 h-6 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold text-text-primary">Submit Blood Request</h2>
+                                <p class="text-text-secondary">Please provide accurate information to help us find the right donors quickly</p>
+                            </div>
+                        </div>
+
+                        <form class="space-y-6" onsubmit="handleEmergencyRequest(event)">
+                            <!-- Patient Information -->
+                            <div class="bg-surface-200 p-6 rounded-lg">
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Patient Information</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="patient-name" class="block text-sm font-semibold text-text-primary mb-2">Patient Name *</label>
+                                        <input type="text" id="patient-name" name="patient-name" required class="input-medical" placeholder="Enter patient's full name" />
+                                    </div>
+                                    <div>
+                                        <label for="patient-age" class="block text-sm font-semibold text-text-primary mb-2">Age *</label>
+                                        <input type="number" id="patient-age" name="patient-age" required class="input-medical" placeholder="Patient age" min="0" max="120" />
+                                    </div>
+                                    <div>
+                                        <label for="patient-gender" class="block text-sm font-semibold text-text-primary mb-2">Gender *</label>
+                                        <select id="patient-gender" name="patient-gender" required class="input-medical">
+                                            <option value>Select gender</option>
+                                            <option value="male">Male</option>
+                                            <option value="female">Female</option>
+                                            <option value="other">Other</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="patient-weight" class="block text-sm font-semibold text-text-primary mb-2">Weight (kg)</label>
+                                        <input type="number" id="patient-weight" name="patient-weight" class="input-medical" placeholder="Patient weight" min="10" max="200" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Blood Requirements -->
+                            <div class="bg-primary-50 p-6 rounded-lg">
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Blood Requirements</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label class="block text-sm font-semibold text-text-primary mb-3">Blood Type Required *</label>
+                                        <div class="grid grid-cols-4 gap-2">
+                                            <button type="button" class="blood-type-btn bg-white border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'A+')">A+</button>
+                                            <button type="button" class="blood-type-btn bg-white border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'A-')">A-</button>
+                                            <button type="button" class="blood-type-btn bg-white border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'B+')">B+</button>
+                                            <button type="button" class="blood-type-btn bg-white border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'B-')">B-</button>
+                                            <button type="button" class="blood-type-btn bg-white border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'O+')">O+</button>
+                                            <button type="button" class="blood-type-btn bg-white border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'O-')">O-</button>
+                                            <button type="button" class="blood-type-btn bg-white border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'AB+')">AB+</button>
+                                            <button type="button" class="blood-type-btn bg-white border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'AB-')">AB-</button>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <label for="blood-quantity" class="block text-sm font-semibold text-text-primary mb-2">Quantity Required *</label>
+                                        <select id="blood-quantity" name="blood-quantity" required class="input-medical">
+                                            <option value>Select quantity</option>
+                                            <option value="1">1 Unit (350ml)</option>
+                                            <option value="2">2 Units (700ml)</option>
+                                            <option value="3">3 Units (1050ml)</option>
+                                            <option value="4">4 Units (1400ml)</option>
+                                            <option value="5+">5+ Units (Contact us)</option>
+                                        </select>
+                                        <p class="text-xs text-text-secondary mt-1">1 unit = approximately 350ml of blood</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-4">
+                                    <label for="urgency-level" class="block text-sm font-semibold text-text-primary mb-2">Urgency Level *</label>
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                                        <label class="flex items-center p-3 border-2 border-border rounded-lg cursor-pointer hover:border-warning-600 transition-medical-fast">
+                                            <input type="radio" name="urgency" value="immediate" class="sr-only" onchange="selectUrgency(this)" />
+                                            <div class="flex items-center">
+                                                <div class="w-4 h-4 bg-error rounded-full mr-3"></div>
+                                                <div>
+                                                    <div class="font-semibold text-error">Immediate</div>
+                                                    <div class="text-xs text-text-secondary">Within 2 hours</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <label class="flex items-center p-3 border-2 border-border rounded-lg cursor-pointer hover:border-warning-600 transition-medical-fast">
+                                            <input type="radio" name="urgency" value="urgent" class="sr-only" onchange="selectUrgency(this)" />
+                                            <div class="flex items-center">
+                                                <div class="w-4 h-4 bg-warning rounded-full mr-3"></div>
+                                                <div>
+                                                    <div class="font-semibold text-warning-600">Urgent</div>
+                                                    <div class="text-xs text-text-secondary">Within 24 hours</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                        <label class="flex items-center p-3 border-2 border-border rounded-lg cursor-pointer hover:border-accent-600 transition-medical-fast">
+                                            <input type="radio" name="urgency" value="planned" class="sr-only" onchange="selectUrgency(this)" />
+                                            <div class="flex items-center">
+                                                <div class="w-4 h-4 bg-accent rounded-full mr-3"></div>
+                                                <div>
+                                                    <div class="font-semibold text-accent-600">Planned</div>
+                                                    <div class="text-xs text-text-secondary">Within 3-7 days</div>
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Hospital Information -->
+                            <div class="bg-secondary-50 p-6 rounded-lg">
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Hospital Information</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="hospital-name" class="block text-sm font-semibold text-text-primary mb-2">Hospital Name *</label>
+                                        <input type="text" id="hospital-name" name="hospital-name" required class="input-medical" placeholder="Enter hospital name" />
+                                    </div>
+                                    <div>
+                                        <label for="doctor-name" class="block text-sm font-semibold text-text-primary mb-2">Attending Doctor</label>
+                                        <input type="text" id="doctor-name" name="doctor-name" class="input-medical" placeholder="Dr. Name (optional)" />
+                                    </div>
+                                    <div class="md:col-span-2">
+                                        <label for="hospital-address" class="block text-sm font-semibold text-text-primary mb-2">Hospital Address *</label>
+                                        <textarea id="hospital-address" name="hospital-address" required class="input-medical" rows="3" placeholder="Complete hospital address with landmark"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Contact Information -->
+                            <div class="bg-accent-50 p-6 rounded-lg">
+                                <h3 class="text-lg font-semibold text-text-primary mb-4">Contact Information</h3>
+                                <div class="grid md:grid-cols-2 gap-4">
+                                    <div>
+                                        <label for="contact-name" class="block text-sm font-semibold text-text-primary mb-2">Your Name *</label>
+                                        <input type="text" id="contact-name" name="contact-name" required class="input-medical" placeholder="Your full name" />
+                                    </div>
+                                    <div>
+                                        <label for="relationship" class="block text-sm font-semibold text-text-primary mb-2">Relationship to Patient *</label>
+                                        <select id="relationship" name="relationship" required class="input-medical">
+                                            <option value>Select relationship</option>
+                                            <option value="self">Self</option>
+                                            <option value="spouse">Spouse</option>
+                                            <option value="parent">Parent</option>
+                                            <option value="child">Child</option>
+                                            <option value="sibling">Sibling</option>
+                                            <option value="relative">Relative</option>
+                                            <option value="friend">Friend</option>
+                                            <option value="medical-staff">Medical Staff</option>
+                                        </select>
+                                    </div>
+                                    <div>
+                                        <label for="contact-phone" class="block text-sm font-semibold text-text-primary mb-2">Phone Number *</label>
+                                        <input type="tel" id="contact-phone" name="contact-phone" required class="input-medical" placeholder="+91 98765 43210" />
+                                    </div>
+                                    <div>
+                                        <label for="contact-email" class="block text-sm font-semibold text-text-primary mb-2">Email Address</label>
+                                        <input type="email" id="contact-email" name="contact-email" class="input-medical" placeholder="your.email@example.com" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Additional Information -->
+                            <div>
+                                <label for="additional-info" class="block text-sm font-semibold text-text-primary mb-2">Additional Information</label>
+                                <textarea id="additional-info" name="additional-info" class="input-medical" rows="3" placeholder="Any additional details that might help us assist you better (medical condition, special requirements, etc.)"></textarea>
+                            </div>
+
+                            <!-- Submit Button -->
+                            <div class="flex flex-col sm:flex-row gap-4">
+                                <button type="submit" class="btn-emergency flex-1">
+                                    <svg class="w-6 h-6 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                    </svg>
+                                    Submit Emergency Request
+                                </button>
+                                <button type="button" class="btn-outline" onclick="callEmergencyHelpline()">
+                                    <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                    </svg>
+                                    Call Helpline
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Support Sidebar -->
+                <div class="space-y-6">
+                    <!-- Family Support Section -->
+                    <div class="card-medical p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-accent-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-accent-600" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-text-primary">Family Support</h3>
+                        </div>
+                        <p class="text-text-secondary mb-4">We understand this is a challenging time. Our support team is here to help you through every step.</p>
+                        <div class="space-y-3">
+                            <a href="javascript:void(0)" class="flex items-center text-accent-600 hover:text-accent-700 transition-medical-fast" onclick="openSupportChat()">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd"/>
+                                </svg>
+                                Live Support Chat
+                            </a>
+                            <a href="javascript:void(0)" class="flex items-center text-accent-600 hover:text-accent-700 transition-medical-fast" onclick="openPeerSupport()">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                </svg>
+                                Connect with Families
+                            </a>
+                            <a href="medical_resource_education_center.html" class="flex items-center text-accent-600 hover:text-accent-700 transition-medical-fast">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293L14 1.586v12.828l2.293 2.293A1 1 0 0018 16V6a1 1 0 00-.293-.707z" clip-rule="evenodd"/>
+                                </svg>
+                                Medical Resources
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Success Probability -->
+                    <div class="card-medical p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-secondary-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                                    <path d="M2 13.692V16a2 2 0 002 2h12a2 2 0 002-2v-2.308A24.974 24.974 0 0110 15c-2.796 0-5.487-.46-8-1.308z"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-text-primary">Success Indicators</h3>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-text-secondary">Match Probability</span>
+                                    <span class="font-semibold text-accent-600">High (94%)</span>
+                                </div>
+                                <div class="progress-medical">
+                                    <div class="progress-medical-bar" style="width: 94%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-text-secondary">Donor Availability</span>
+                                    <span class="font-semibold text-accent-600">Good</span>
+                                </div>
+                                <div class="progress-medical">
+                                    <div class="progress-medical-bar" style="width: 78%"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between text-sm mb-1">
+                                    <span class="text-text-secondary">Response Time</span>
+                                    <span class="font-semibold text-accent-600">Excellent</span>
+                                </div>
+                                <div class="progress-medical">
+                                    <div class="progress-medical-bar" style="width: 96%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-text-secondary mt-4">Based on historical data for your area and blood type requirements</p>
+                    </div>
+
+                    <!-- Emergency Escalation -->
+                    <div class="card-critical p-6">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-primary-100 rounded-full flex items-center justify-center mr-3">
+                                <svg class="w-5 h-5 text-primary animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <h3 class="text-lg font-semibold text-text-primary">Critical Emergency?</h3>
+                        </div>
+                        <p class="text-text-secondary mb-4">If this is a life-threatening emergency, use these immediate options:</p>
+                        <div class="space-y-3">
+                            <button onclick="callEmergencyHelpline()" class="w-full bg-primary text-white px-4 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-medical-fast flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                                Call 1800-123-456
+                            </button>
+                            <button onclick="amplifyRequest()" class="w-full bg-secondary text-white px-4 py-3 rounded-lg font-semibold hover:bg-secondary-800 transition-medical-fast flex items-center justify-center">
+                                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M15.905 14.626c.356-1.751-.834-3.426-2.65-3.426-1.815 0-3.005 1.675-2.65 3.426.356 1.751 2.294 2.374 2.65 2.374s2.294-.623 2.65-2.374zM8.905 14.626c.356-1.751-.834-3.426-2.65-3.426-1.815 0-3.005 1.675-2.65 3.426.356 1.751 2.294 2.374 2.65 2.374s2.294-.623 2.65-2.374z"/>
+                                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                </svg>
+                                Social Media Alert
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Recent Success Stories -->
+                    <div class="card-medical p-6">
+                        <h3 class="text-lg font-semibold text-text-primary mb-4">Hope & Inspiration</h3>
+                        <div class="space-y-4">
+                            <div class="border-l-4 border-accent pl-4">
+                                <p class="text-sm text-text-secondary">"Found 3 donors within 30 minutes for my father's surgery. The support team was incredible during our difficult time."</p>
+                                <p class="text-xs text-text-tertiary mt-1">- Meera S., Mumbai (2 days ago)</p>
+                            </div>
+                            <div class="border-l-4 border-accent pl-4">
+                                <p class="text-sm text-text-secondary">"Emergency request at 2 AM was handled professionally. Donors reached hospital before sunrise. Thank you R•N ResQ!"</p>
+                                <p class="text-xs text-text-tertiary mt-1">- Rajesh K., Delhi (1 week ago)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-auto mr-3" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" fill="#DC2626" opacity="0.2"/>
+                            <path d="M12 20L18 14L24 20L18 26L12 20Z" fill="#DC2626"/>
+                            <path d="M16 16H20V24H16V16Z" fill="white"/>
+                            <path d="M14 18H22V22H14V18Z" fill="white"/>
+                        </svg>
+                        <div>
+                            <div class="text-xl font-bold text-primary">R•N ResQ</div>
+                            <div class="text-sm text-gray-300">Every drop counts, every donor matters</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        India's most trusted blood donation platform connecting donors with those in need. 
+                        Join our community of life-savers and make a difference today.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.222.085.343-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z.017-.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="donor_registration_dashboard.html" class="text-gray-300 hover:text-primary transition-medical-fast">Become a Donor</a></li>
+                        <li><a href="emergency_blood_request_center.html" class="text-gray-300 hover:text-primary transition-medical-fast">Request Blood</a></li>
+                        <li><a href="hospital_blood_bank_portal.html" class="text-gray-300 hover:text-primary transition-medical-fast">Hospital Portal</a></li>
+                        <li><a href="location_intelligence_blood_availability_map.html" class="text-gray-300 hover:text-primary transition-medical-fast">Blood Availability Map</a></li>
+                        <li><a href="medical_resource_education_center.html" class="text-gray-300 hover:text-primary transition-medical-fast">Medical Resources</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Emergency Contact</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <a href="tel:+911800123456" class="text-gray-300 hover:text-primary transition-medical-fast">1800-123-456</a>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <a href="mailto:help@rnresq.com" class="text-gray-300 hover:text-primary transition-medical-fast">help@rnresq.com</a>
+                        </div>
+                        <div class="text-gray-300 text-sm mt-4">
+                            Available 24/7 for emergencies
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 R•N ResQ. All Rights Reserved. | Saving lives through technology and compassion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Blood type selection
+        let selectedBloodType = '';
+        function selectBloodType(button, bloodType) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.blood-type-btn').forEach(btn => {
+                btn.classList.remove('border-primary', 'bg-primary-50', 'text-primary');
+                btn.classList.add('border-border', 'bg-white', 'text-text-primary');
+            });
+            
+            // Add active class to selected button
+            button.classList.remove('border-border', 'bg-white', 'text-text-primary');
+            button.classList.add('border-primary', 'bg-primary-50', 'text-primary');
+            
+            selectedBloodType = bloodType;
+        }
+
+        // Urgency level selection
+        function selectUrgency(radio) {
+            // Remove active styles from all urgency options
+            document.querySelectorAll('input[name="urgency"]').forEach(input => {
+                const label = input.closest('label');
+                label.classList.remove('border-primary', 'bg-primary-50');
+                label.classList.add('border-border');
+            });
+            
+            // Add active style to selected option
+            const selectedLabel = radio.closest('label');
+            selectedLabel.classList.remove('border-border');
+            selectedLabel.classList.add('border-primary', 'bg-primary-50');
+        }
+
+        // Emergency request form submission
+        function handleEmergencyRequest(event) {
+            event.preventDefault();
+            
+            // Validate blood type selection
+            if (!selectedBloodType) {
+                alert('Please select a blood type');
+                return;
+            }
+            
+            // Validate urgency selection
+            const urgencySelected = document.querySelector('input[name="urgency"]:checked');
+            if (!urgencySelected) {
+                alert('Please select urgency level');
+                return;
+            }
+            
+            // Show success message and redirect
+            alert('Emergency blood request submitted successfully! Our team will contact you within 15 minutes. Request ID: ER' + Date.now().toString().slice(-6));
+            
+            // In a real app, this would submit to backend and redirect to status tracking
+            setTimeout(() => {
+                window.location.href = 'homepage_emergency_blood_search_hub.html';
+            }, 2000);
+        }
+
+        // Emergency helpline call
+        function callEmergencyHelpline() {
+            if (confirm('This will call our 24/7 emergency helpline. Continue?')) {
+                window.location.href = 'tel:+911800123456';
+            }
+        }
+
+        // Social media amplification
+        function amplifyRequest() {
+            const message = "URGENT: Blood needed! Please help spread the word. Every share can save a life. #BloodDonation #SaveLives #RNResQ";
+            
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Urgent Blood Request - Help Save a Life',
+                    text: message,
+                    url: window.location.href
+                });
+            } else {
+                // Fallback for browsers without Web Share API
+                const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(message)}`;
+                window.open(twitterUrl, '_blank');
+            }
+        }
+
+        // Support chat functions
+        function openSupportChat() {
+            alert('Connecting you to our support team... (In a real app, this would open a live chat widget)');
+        }
+
+        function openPeerSupport() {
+            alert('Connecting you to our peer support community... (In a real app, this would open a community chat)');
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-focus on first input
+            const firstInput = document.getElementById('patient-name');
+            if (firstInput) {
+                firstInput.focus();
+            }
+            
+            // Add form validation listeners
+            const form = document.querySelector('form');
+            const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+            
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.value.trim() === '') {
+                        this.classList.add('border-error');
+                    } else {
+                        this.classList.remove('border-error');
+                    }
+                });
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medical Resource & Education Center | R•N ResQ - Expert Blood Donation Guidance</title>
+    <meta name="description" content="Comprehensive blood donation education with expert medical guidance. Learn about eligibility, safety protocols, health benefits, and get answers from certified hematologists." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Frnresq1902back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background font-inter">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-medical sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-10 w-auto" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" fill="#DC2626" opacity="0.1"/>
+                            <path d="M12 20L18 14L24 20L18 26L12 20Z" fill="#DC2626"/>
+                            <path d="M16 16H20V24H16V16Z" fill="white"/>
+                            <path d="M14 18H22V22H14V18Z" fill="white"/>
+                            <text x="35" y="16" font-family="Inter" font-weight="700" font-size="14" fill="#DC2626">R•N</text>
+                            <text x="35" y="30" font-family="Inter" font-weight="600" font-size="12" fill="#1E40AF">ResQ</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage_emergency_blood_search_hub.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="donor_registration_dashboard.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Become Donor</a>
+                        <a href="emergency_blood_request_center.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Request Blood</a>
+                        <a href="hospital_blood_bank_portal.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Hospital Portal</a>
+                        <a href="medical_resource_education_center.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">Resources</a>
+                        <a href="location_intelligence_blood_availability_map.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Blood Map</a>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:+911800123456" class="bg-primary text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-primary-700 transition-medical-fast flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        Emergency: 1800-123-456
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary transition-medical-fast" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-border">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage_emergency_blood_search_hub.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="donor_registration_dashboard.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Become Donor</a>
+                <a href="emergency_blood_request_center.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Request Blood</a>
+                <a href="hospital_blood_bank_portal.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Hospital Portal</a>
+                <a href="medical_resource_education_center.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">Resources</a>
+                <a href="location_intelligence_blood_availability_map.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Blood Map</a>
+                <a href="tel:+911800123456" class="bg-primary text-white block px-3 py-2 rounded-md text-base font-semibold mt-4">Emergency: 1800-123-456</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gradient-to-br from-primary-50 via-white to-secondary-50 py-16 lg:py-20 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="medical-cross" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <path d="M8 6h4v8h-4zM6 8h8v4h-8z" fill="#DC2626"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#medical-cross)"/>
+            </svg>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl lg:text-6xl font-bold text-text-primary mb-6 leading-tight">
+                    Medical Resource &<br />
+                    <span class="text-primary">Education Center</span>
+                </h1>
+                <p class="text-xl text-text-secondary mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Expert-reviewed blood donation guidance addressing Indian cultural concerns and medical myths. 
+                    Get certified information from leading hematologists and healthcare professionals.
+                </p>
+
+                <!-- Quick Access Navigation -->
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <a href="#eligibility-checker" class="bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 transition-medical-fast">Eligibility Checker</a>
+                    <a href="#myth-busting" class="bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-secondary-800 transition-medical-fast">Myth Busting</a>
+                    <a href="#safety-protocols" class="bg-accent text-white px-6 py-3 rounded-lg font-semibold hover:bg-accent-700 transition-medical-fast">Safety Protocols</a>
+                    <a href="#expert-interviews" class="bg-text-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-text-secondary transition-medical-fast">Expert Interviews</a>
+                </div>
+
+                <!-- Medical Certifications -->
+                <div class="flex flex-wrap justify-center gap-6 opacity-70">
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-medical">
+                        <svg class="w-6 h-6 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-sm font-medium text-text-primary">IMA Certified</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-medical">
+                        <svg class="w-6 h-6 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-sm font-medium text-text-primary">MoHFW Approved</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-medical">
+                        <svg class="w-6 h-6 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-sm font-medium text-text-primary">WHO Guidelines</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Eligibility Checker -->
+    <section id="eligibility-checker" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Blood Donation Eligibility Checker</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Interactive questionnaire to determine your eligibility for blood donation with instant medical feedback</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-start">
+                <!-- Eligibility Form -->
+                <div class="card-medical p-8">
+                    <h3 class="text-2xl font-bold text-text-primary mb-6">Check Your Eligibility</h3>
+                    <form id="eligibility-form" class="space-y-6">
+                        <!-- Age -->
+                        <div>
+                            <label class="block text-sm font-semibold text-text-primary mb-2">Age</label>
+                            <select class="input-medical" name="age" required>
+                                <option value>Select your age range</option>
+                                <option value="under-18">Under 18 years</option>
+                                <option value="18-65">18-65 years</option>
+                                <option value="over-65">Over 65 years</option>
+                            </select>
+                        </div>
+
+                        <!-- Weight -->
+                        <div>
+                            <label class="block text-sm font-semibold text-text-primary mb-2">Weight</label>
+                            <select class="input-medical" name="weight" required>
+                                <option value>Select your weight range</option>
+                                <option value="under-45">Under 45 kg</option>
+                                <option value="45-above">45 kg or above</option>
+                            </select>
+                        </div>
+
+                        <!-- Health Conditions -->
+                        <div>
+                            <label class="block text-sm font-semibold text-text-primary mb-2">Current Health Status</label>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="conditions" value="diabetes" class="mr-3 text-primary focus:ring-primary-500" />
+                                    <span class="text-text-secondary">Diabetes</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="conditions" value="hypertension" class="mr-3 text-primary focus:ring-primary-500" />
+                                    <span class="text-text-secondary">High Blood Pressure</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="conditions" value="heart-disease" class="mr-3 text-primary focus:ring-primary-500" />
+                                    <span class="text-text-secondary">Heart Disease</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="conditions" value="none" class="mr-3 text-primary focus:ring-primary-500" />
+                                    <span class="text-text-secondary">None of the above</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Recent Activities -->
+                        <div>
+                            <label class="block text-sm font-semibold text-text-primary mb-2">Recent Activities (Last 3 months)</label>
+                            <div class="space-y-3">
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="recent" value="surgery" class="mr-3 text-primary focus:ring-primary-500" />
+                                    <span class="text-text-secondary">Major surgery or dental work</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="recent" value="tattoo" class="mr-3 text-primary focus:ring-primary-500" />
+                                    <span class="text-text-secondary">Tattoo or piercing</span>
+                                </label>
+                                <label class="flex items-center">
+                                    <input type="checkbox" name="recent" value="travel" class="mr-3 text-primary focus:ring-primary-500" />
+                                    <span class="text-text-secondary">Travel to malaria-endemic areas</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-primary w-full">Check My Eligibility</button>
+                    </form>
+
+                    <!-- Results Display -->
+                    <div id="eligibility-result" class="hidden mt-6 p-4 rounded-lg"></div>
+                </div>
+
+                <!-- Eligibility Guidelines -->
+                <div class="space-y-6">
+                    <div class="card-medical p-6">
+                        <h4 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                            <svg class="w-6 h-6 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            Basic Requirements
+                        </h4>
+                        <ul class="space-y-2 text-text-secondary">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Age: 18-65 years (first-time donors under 60)
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Weight: Minimum 45 kg (99 lbs)
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Hemoglobin: Minimum 12.5 g/dL
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-accent rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Good general health with no active infections
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="card-medical p-6">
+                        <h4 class="text-xl font-bold text-text-primary mb-4 flex items-center">
+                            <svg class="w-6 h-6 text-warning mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                            </svg>
+                            Temporary Deferrals
+                        </h4>
+                        <ul class="space-y-2 text-text-secondary">
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-warning rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Recent tattoo/piercing: 6 months wait
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-warning rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Dental work: 24-72 hours wait
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-warning rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Vaccination: 1-4 weeks depending on type
+                            </li>
+                            <li class="flex items-start">
+                                <span class="w-2 h-2 bg-warning rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                Pregnancy/breastfeeding: 6 months post-delivery
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Myth Busting Section -->
+    <section id="myth-busting" class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Myth Busting with Medical Facts</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Addressing common Indian misconceptions about blood donation with culturally sensitive, scientifically accurate explanations</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Myth 1: Weakness -->
+                <div class="card-medical p-6">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-error-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-text-primary mb-2">MYTH: "Blood donation makes you weak"</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-accent mb-2">FACT: Regular donation improves health</h4>
+                            <p class="text-text-secondary">Your body replaces donated blood within 24-48 hours. Regular donation reduces iron overload, lowers cardiovascular disease risk, and stimulates new blood cell production, actually improving your overall health.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Myth 2: Religious Concerns -->
+                <div class="card-medical p-6">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-error-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-text-primary mb-2">MYTH: "Blood donation affects religious purity"</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-accent mb-2">FACT: Saving lives is the highest virtue</h4>
+                            <p class="text-text-secondary">All major Indian religions - Hinduism, Islam, Christianity, Sikhism - consider saving lives as the highest form of service. Religious leaders across India actively promote blood donation as a sacred act of compassion.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Myth 3: Fertility -->
+                <div class="card-medical p-6">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-error-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-text-primary mb-2">MYTH: "Blood donation affects fertility"</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-accent mb-2">FACT: No impact on reproductive health</h4>
+                            <p class="text-text-secondary">Medical research shows no connection between blood donation and fertility. Millions of healthy donors worldwide have normal reproductive lives. The small amount donated (350ml) has zero impact on reproductive organs or hormones.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Myth 4: Weight Gain -->
+                <div class="card-medical p-6">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-error-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-text-primary mb-2">MYTH: "Donation causes weight gain"</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-accent mb-2">FACT: May actually help maintain healthy weight</h4>
+                            <p class="text-text-secondary">Blood donation burns approximately 650 calories as your body works to replenish the donated blood. Regular donors often maintain better metabolic health and weight management compared to non-donors.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Myth 5: Infection Risk -->
+                <div class="card-medical p-6">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-error-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-text-primary mb-2">MYTH: "Risk of getting infections"</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-accent mb-2">FACT: Zero infection risk with sterile procedures</h4>
+                            <p class="text-text-secondary">All equipment is sterile and single-use. New, sealed needles are used for each donor and immediately disposed of. It's impossible to contract any infection through blood donation at certified centers.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Myth 6: Blood Type Mixing -->
+                <div class="card-medical p-6">
+                    <div class="flex items-start mb-4">
+                        <div class="w-12 h-12 bg-error-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-error" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-lg font-bold text-text-primary mb-2">MYTH: "Blood gets mixed with other donors"</h3>
+                        </div>
+                    </div>
+                    <div class="flex items-start">
+                        <div class="w-12 h-12 bg-accent-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                            <svg class="w-6 h-6 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4 class="text-lg font-bold text-accent mb-2">FACT: Each donation is individually processed</h4>
+                            <p class="text-text-secondary">Every blood donation is collected in separate, labeled bags and processed individually. Your blood is never mixed with others. Each unit maintains complete traceability from donor to recipient.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety Protocols Section -->
+    <section id="safety-protocols" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Safety Protocols & Procedures</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Behind-the-scenes look at our sterilization procedures, needle safety, and infection prevention measures</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Safety Video Placeholder -->
+                <div class="relative">
+                    <div class="bg-surface-200 rounded-xl h-80 flex items-center justify-center relative overflow-hidden">
+                        <img src="https://images.pexels.com/photos/4386466/pexels-photo-4386466.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Blood donation safety procedures in Indian hospital" class="w-full h-full object-cover rounded-xl" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                            <button class="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-medical-fast" onclick="playVideo()">
+                                <svg class="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                    <p class="text-center mt-4 text-text-secondary">Watch: Complete Safety Walkthrough (3:45 mins)</p>
+                </div>
+
+                <!-- Safety Checklist -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-text-primary mb-6">Our 12-Point Safety Protocol</h3>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">1</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Sterile Environment Maintenance</h4>
+                                <p class="text-text-secondary">All donation areas undergo UV sterilization and HEPA air filtration</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">2</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Single-Use Equipment Only</h4>
+                                <p class="text-text-secondary">New, sealed needles and collection bags for every donor</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">3</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Pre-Donation Health Screening</h4>
+                                <p class="text-text-secondary">Temperature, blood pressure, and hemoglobin testing</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">4</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Trained Medical Supervision</h4>
+                                <p class="text-text-secondary">Certified phlebotomists and medical officers present</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">5</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Post-Donation Monitoring</h4>
+                                <p class="text-text-secondary">15-minute observation period with refreshments</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="w-8 h-8 bg-accent rounded-full flex items-center justify-center mr-4 flex-shrink-0">
+                                <span class="text-white font-bold text-sm">6</span>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-text-primary">Complete Blood Testing</h4>
+                                <p class="text-text-secondary">Screening for HIV, Hepatitis B & C, Syphilis, and Malaria</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-accent-50 p-4 rounded-lg border border-accent-200">
+                        <div class="flex items-center">
+                            <svg class="w-6 h-6 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                            <span class="font-semibold text-accent-800">100% Safety Record</span>
+                        </div>
+                        <p class="text-accent-700 mt-2">Zero infection incidents in over 50,000 donations across our network</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Interviews Section -->
+    <section id="expert-interviews" class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Expert Medical Interviews</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Leading Indian hematologists and healthcare professionals discuss blood shortage impacts and donation importance</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Expert 1 -->
+                <div class="card-medical p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dr. Rajesh Malhotra - Senior Hematologist" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-bold text-text-primary">Dr. Rajesh Malhotra</h4>
+                            <p class="text-sm text-text-secondary">Senior Hematologist, AIIMS Delhi</p>
+                            <p class="text-xs text-accent-600">25+ years experience</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-text-secondary italic mb-4">
+                        "Blood shortage is India's silent health crisis. Every 2 seconds, someone needs blood. Regular donation by healthy individuals is the only solution to save lives."
+                    </blockquote>
+                    <button class="text-primary font-semibold hover:text-primary-700 transition-medical-fast flex items-center" onclick="playInterview('dr-malhotra')">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                        </svg>
+                        Watch Full Interview (8:30)
+                    </button>
+                </div>
+
+                <!-- Expert 2 -->
+                <div class="card-medical p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dr. Priya Sharma - Blood Bank Director" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-bold text-text-primary">Dr. Priya Sharma</h4>
+                            <p class="text-sm text-text-secondary">Blood Bank Director, Apollo Mumbai</p>
+                            <p class="text-xs text-accent-600">IMA Blood Safety Committee</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-text-secondary italic mb-4">
+                        "Modern blood banking is incredibly safe. We follow WHO guidelines strictly. Donors face zero risk and gain significant health benefits from regular donation."
+                    </blockquote>
+                    <button class="text-primary font-semibold hover:text-primary-700 transition-medical-fast flex items-center" onclick="playInterview('dr-sharma')">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                        </svg>
+                        Watch Full Interview (6:45)
+                    </button>
+                </div>
+
+                <!-- Expert 3 -->
+                <div class="card-medical p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.pixabay.com/photo/2017/03/14/03/20/woman-2141808_1280.jpg" alt="Dr. Anjali Mehta - Transfusion Medicine Specialist" class="w-16 h-16 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-bold text-text-primary">Dr. Anjali Mehta</h4>
+                            <p class="text-sm text-text-secondary">Transfusion Medicine, Fortis</p>
+                            <p class="text-xs text-accent-600">Blood Safety Expert</p>
+                        </div>
+                    </div>
+                    <blockquote class="text-text-secondary italic mb-4">
+                        "I've seen families devastated by blood shortages. Every healthy person should donate. It's the most direct way to save lives in your community."
+                    </blockquote>
+                    <button class="text-primary font-semibold hover:text-primary-700 transition-medical-fast flex items-center" onclick="playInterview('dr-mehta')">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                        </svg>
+                        Watch Full Interview (7:15)
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Benefits Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Health Benefits of Blood Donation</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Scientific evidence showing how regular blood donation improves donor health with expert endorsements</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="card-medical p-6 text-center">
+                    <div class="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-accent" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Heart Health</h3>
+                    <p class="text-text-secondary">Regular donation reduces iron overload, lowering cardiovascular disease risk by up to 30%</p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="card-medical p-6 text-center">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Blood Cell Renewal</h3>
+                    <p class="text-text-secondary">Stimulates production of fresh, healthy blood cells improving overall blood quality</p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="card-medical p-6 text-center">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Free Health Check</h3>
+                    <p class="text-text-secondary">Comprehensive blood testing including HIV, Hepatitis screening at no cost</p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="card-medical p-6 text-center">
+                    <div class="w-16 h-16 bg-warning-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-warning" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 6a3 3 0 013-3h10a1 1 0 01.8 1.6L14.25 8l2.55 3.4A1 1 0 0116 13H6a1 1 0 00-1 1v3a1 1 0 11-2 0V6z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-text-primary mb-2">Calorie Burn</h3>
+                    <p class="text-text-secondary">Burns approximately 650 calories per donation, supporting healthy weight management</p>
+                </div>
+            </div>
+
+            <!-- Scientific Evidence -->
+            <div class="mt-12 bg-surface p-8 rounded-xl">
+                <h3 class="text-2xl font-bold text-text-primary mb-6 text-center">Scientific Research Evidence</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-text-primary mb-3">Cardiovascular Benefits</h4>
+                        <p class="text-text-secondary mb-4">A study published in the American Journal of Epidemiology found that regular blood donors had 88% lower risk of heart attacks compared to non-donors.</p>
+                        <p class="text-sm text-accent-600 font-medium">Source: American Journal of Epidemiology, 2019</p>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-text-primary mb-3">Cancer Risk Reduction</h4>
+                        <p class="text-text-secondary mb-4">Regular blood donation reduces iron stores, which may lower the risk of certain cancers, particularly liver and lung cancer.</p>
+                        <p class="text-sm text-accent-600 font-medium">Source: Journal of the National Cancer Institute, 2020</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-text-secondary">Medically accurate answers to common concerns about blood donation</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ 1 -->
+                <div class="card-medical">
+                    <button class="w-full p-6 text-left focus:outline-none" onclick="toggleFAQ(1)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-text-primary">How often can I donate blood?</h3>
+                            <svg id="faq-icon-1" class="w-6 h-6 text-text-secondary transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="faq-content-1" class="hidden px-6 pb-6">
+                        <p class="text-text-secondary">You can donate whole blood every 56 days (8 weeks). This interval allows your body to fully replenish the donated blood. Platelet donations can be made every 7 days, up to 24 times per year. Your body replaces plasma within 24-48 hours and red blood cells within 4-6 weeks.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="card-medical">
+                    <button class="w-full p-6 text-left focus:outline-none" onclick="toggleFAQ(2)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-text-primary">What should I eat before and after donation?</h3>
+                            <svg id="faq-icon-2" class="w-6 h-6 text-text-secondary transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="faq-content-2" class="hidden px-6 pb-6">
+                        <p class="text-text-secondary mb-3"><strong>Before donation:</strong> Eat iron-rich foods like spinach, dates, pomegranate, and lean meat. Avoid fatty foods. Drink plenty of water.</p>
+                        <p class="text-text-secondary"><strong>After donation:</strong> Continue drinking fluids, eat iron-rich foods, and avoid heavy lifting for 24 hours. Include vitamin C foods to enhance iron absorption.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="card-medical">
+                    <button class="w-full p-6 text-left focus:outline-none" onclick="toggleFAQ(3)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-text-primary">Can I donate during menstruation?</h3>
+                            <svg id="faq-icon-3" class="w-6 h-6 text-text-secondary transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="faq-content-3" class="hidden px-6 pb-6">
+                        <p class="text-text-secondary">Yes, you can donate during menstruation if you feel well and meet all other eligibility criteria. However, if you experience heavy bleeding, fatigue, or low hemoglobin levels, it's better to wait until after your cycle. Our medical team will check your hemoglobin levels before donation.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="card-medical">
+                    <button class="w-full p-6 text-left focus:outline-none" onclick="toggleFAQ(4)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-text-primary">What happens to my blood after donation?</h3>
+                            <svg id="faq-icon-4" class="w-6 h-6 text-text-secondary transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="faq-content-4" class="hidden px-6 pb-6">
+                        <p class="text-text-secondary">Your blood undergoes comprehensive testing for infectious diseases, blood typing, and quality checks. It's then separated into components (red cells, plasma, platelets) and stored under specific conditions. Each component can help different patients - red cells for surgery patients, plasma for burn victims, platelets for cancer patients.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ 5 -->
+                <div class="card-medical">
+                    <button class="w-full p-6 text-left focus:outline-none" onclick="toggleFAQ(5)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-semibold text-text-primary">Can I donate if I have diabetes or high blood pressure?</h3>
+                            <svg id="faq-icon-5" class="w-6 h-6 text-text-secondary transform transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                            </svg>
+                        </div>
+                    </button>
+                    <div id="faq-content-5" class="hidden px-6 pb-6">
+                        <p class="text-text-secondary">If your diabetes or blood pressure is well-controlled with medication and you feel healthy, you may be eligible to donate. Your blood pressure will be checked before donation (must be between 90/50 and 180/100). For diabetes, your condition should be stable. Our medical team will evaluate your individual case.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-16 bg-primary text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold mb-6">Ready to Save Lives?</h2>
+            <p class="text-xl mb-8 opacity-90">Join thousands of verified donors making a difference in their communities. Your donation can save up to 3 lives.</p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="donor_registration_dashboard.html" class="bg-white text-primary px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-medical-fast">Register as Donor</a>
+                <a href="emergency_blood_request_center.html" class="border-2 border-white text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white hover:text-primary transition-medical-fast">Request Blood</a>
+            </div>
+
+            <div class="mt-8 text-center opacity-75">
+                <p class="text-sm">Questions? Call our medical helpline: <a href="tel:+911800123456" class="font-semibold underline">1800-123-456</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-auto mr-3" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" fill="#DC2626" opacity="0.2"/>
+                            <path d="M12 20L18 14L24 20L18 26L12 20Z" fill="#DC2626"/>
+                            <path d="M16 16H20V24H16V16Z" fill="white"/>
+                            <path d="M14 18H22V22H14V18Z" fill="white"/>
+                        </svg>
+                        <div>
+                            <div class="text-xl font-bold text-primary">R•N ResQ</div>
+                            <div class="text-sm text-gray-300">Every drop counts, every donor matters</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        India's most trusted blood donation platform connecting donors with those in need. 
+                        Join our community of life-savers and make a difference today.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.222.085.343-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z.017-.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="donor_registration_dashboard.html" class="text-gray-300 hover:text-primary transition-medical-fast">Become a Donor</a></li>
+                        <li><a href="emergency_blood_request_center.html" class="text-gray-300 hover:text-primary transition-medical-fast">Request Blood</a></li>
+                        <li><a href="hospital_blood_bank_portal.html" class="text-gray-300 hover:text-primary transition-medical-fast">Hospital Portal</a></li>
+                        <li><a href="location_intelligence_blood_availability_map.html" class="text-gray-300 hover:text-primary transition-medical-fast">Blood Availability Map</a></li>
+                        <li><a href="medical_resource_education_center.html" class="text-gray-300 hover:text-primary transition-medical-fast">Medical Resources</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Emergency Contact</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <a href="tel:+911800123456" class="text-gray-300 hover:text-primary transition-medical-fast">1800-123-456</a>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <a href="mailto:help@rnresq.com" class="text-gray-300 hover:text-primary transition-medical-fast">help@rnresq.com</a>
+                        </div>
+                        <div class="text-gray-300 text-sm mt-4">
+                            Available 24/7 for emergencies
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 R•N ResQ. All Rights Reserved. | Saving lives through technology and compassion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Eligibility checker form
+        function handleEligibilityForm(event) {
+            event.preventDefault();
+            
+            const formData = new FormData(event.target);
+            const age = formData.get('age');
+            const weight = formData.get('weight');
+            const conditions = formData.getAll('conditions');
+            const recent = formData.getAll('recent');
+            
+            let eligible = true;
+            let message = '';
+            let resultClass = '';
+            
+            // Check eligibility criteria
+            if (age === 'under-18' || age === 'over-65') {
+                eligible = false;
+                message = 'Age requirement not met. Donors must be between 18-65 years old.';
+            } else if (weight === 'under-45') {
+                eligible = false;
+                message = 'Weight requirement not met. Minimum weight requirement is 45 kg.';
+            } else if (conditions.includes('heart-disease') || (conditions.includes('diabetes') && conditions.includes('hypertension'))) {
+                eligible = false;
+                message = 'Medical conditions may affect eligibility. Please consult with our medical team.';
+            } else if (recent.includes('surgery') || recent.includes('tattoo')) {
+                eligible = false;
+                message = 'Recent activities require a waiting period. Please contact us for specific timelines.';
+            }
+            
+            if (eligible) {
+                message = 'Congratulations! You appear eligible to donate blood. Please schedule an appointment for final medical screening.';
+                resultClass = 'bg-accent-50 border border-accent-200 text-accent-800';
+            } else {
+                resultClass = 'bg-warning-50 border border-warning-200 text-warning-800';
+            }
+            
+            const resultDiv = document.getElementById('eligibility-result');
+            resultDiv.className = `p-4 rounded-lg ${resultClass}`;
+            resultDiv.innerHTML = `
+                <div class="flex items-start">
+                    <svg class="w-6 h-6 mr-2 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                        <path d="${eligible ? 'M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z' : 'M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z'}"/>
+                    </svg>
+                    <div>
+                        <h4 class="font-semibold mb-2">${eligible ? 'Eligible to Donate!' : 'Additional Review Needed'}</h4>
+                        <p>${message}</p>
+                        ${eligible ? '<a href="donor_registration_dashboard.html" class="inline-block mt-3 bg-primary text-white px-4 py-2 rounded font-semibold hover:bg-primary-700 transition-medical-fast">Register Now</a>' : '<a href="tel:+911800123456" class="inline-block mt-3 bg-primary text-white px-4 py-2 rounded font-semibold hover:bg-primary-700 transition-medical-fast">Consult Medical Team</a>'}
+                    </div>
+                </div>
+            `;
+            resultDiv.classList.remove('hidden');
+        }
+
+        // FAQ toggle functionality
+        function toggleFAQ(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.style.transform = 'rotate(180deg)';
+            } else {
+                content.classList.add('hidden');
+                icon.style.transform = 'rotate(0deg)';
+            }
+        }
+
+        // Video and interview placeholders
+        function playVideo() {
+            alert('Safety protocol video would play here. This demonstrates the interactive video functionality.');
+        }
+
+        function playInterview(doctor) {
+            alert(`Interview with ${doctor} would play here. This demonstrates the expert interview functionality.`);
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add form submission handler
+            const eligibilityForm = document.getElementById('eligibility-form');
+            if (eligibilityForm) {
+                eligibilityForm.addEventListener('submit', handleEligibilityForm);
+            }
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

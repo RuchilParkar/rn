@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>R•N ResQ - Emergency Blood Search Hub | Save Lives Through Technology</title>
+    <meta name="description" content="India's most trusted blood donation platform. Find blood donors instantly, register as a donor, or request emergency blood with real-time availability across Indian cities." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Frnresq1902back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background font-inter">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-medical sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-10 w-auto" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" fill="#DC2626" opacity="0.1"/>
+                            <path d="M12 20L18 14L24 20L18 26L12 20Z" fill="#DC2626"/>
+                            <path d="M16 16H20V24H16V16Z" fill="white"/>
+                            <path d="M14 18H22V22H14V18Z" fill="white"/>
+                            <text x="35" y="16" font-family="Inter" font-weight="700" font-size="14" fill="#DC2626">R•N</text>
+                            <text x="35" y="30" font-family="Inter" font-weight="600" font-size="12" fill="#1E40AF">ResQ</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage_emergency_blood_search_hub.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">Home</a>
+                        <a href="donor_registration_dashboard.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Become Donor</a>
+                        <a href="emergency_blood_request_center.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Request Blood</a>
+                        <a href="hospital_blood_bank_portal.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Hospital Portal</a>
+                        <a href="medical_resource_education_center.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Resources</a>
+                        <a href="location_intelligence_blood_availability_map.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Blood Map</a>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:+911800123456" class="bg-primary text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-primary-700 transition-medical-fast flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        Emergency: 1800-123-456
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary transition-medical-fast" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-border">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage_emergency_blood_search_hub.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">Home</a>
+                <a href="donor_registration_dashboard.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Become Donor</a>
+                <a href="emergency_blood_request_center.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Request Blood</a>
+                <a href="hospital_blood_bank_portal.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Hospital Portal</a>
+                <a href="medical_resource_education_center.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Resources</a>
+                <a href="location_intelligence_blood_availability_map.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Blood Map</a>
+                <a href="tel:+911800123456" class="bg-primary text-white block px-3 py-2 rounded-md text-base font-semibold mt-4">Emergency: 1800-123-456</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Emergency Search -->
+    <section class="relative bg-gradient-to-br from-primary-50 via-white to-secondary-50 py-16 lg:py-24 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-5">
+            <svg class="w-full h-full" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <defs>
+                    <pattern id="medical-cross" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                        <path d="M8 6h4v8h-4zM6 8h8v4h-8z" fill="#DC2626"/>
+                    </pattern>
+                </defs>
+                <rect width="100" height="100" fill="url(#medical-cross)"/>
+            </svg>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl lg:text-6xl font-bold text-text-primary mb-6 leading-tight">
+                        Every drop counts,<br />
+                        <span class="text-primary">every donor matters</span>
+                    </h1>
+                    <p class="text-xl text-text-secondary mb-8 leading-relaxed">
+                        India's most trusted blood donation platform connecting donors with those in need. 
+                        Find blood instantly or become a life-saving hero in your community.
+                    </p>
+
+                    <!-- Real-time Impact Counters -->
+                    <div class="grid grid-cols-3 gap-6 mb-8">
+                        <div class="text-center">
+                            <div class="impact-counter text-primary mb-2">12,847</div>
+                            <div class="text-sm text-text-secondary font-medium">Lives Saved</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="impact-counter text-accent-600 mb-2">8,432</div>
+                            <div class="text-sm text-text-secondary font-medium">Active Donors</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="impact-counter text-secondary mb-2">156</div>
+                            <div class="text-sm text-text-secondary font-medium">Partner Hospitals</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Emergency Blood Search Interface -->
+                <div class="card-medical p-8 max-w-lg mx-auto lg:mx-0">
+                    <div class="text-center mb-6">
+                        <h2 class="text-2xl font-bold text-text-primary mb-2">Find Blood Now</h2>
+                        <p class="text-text-secondary">Emergency blood search across India</p>
+                    </div>
+
+                    <form class="space-y-6" onsubmit="handleEmergencySearch(event)">
+                        <!-- Blood Type Selection -->
+                        <div>
+                            <label class="block text-sm font-semibold text-text-primary mb-3">Select Blood Type</label>
+                            <div class="grid grid-cols-4 gap-3">
+                                <button type="button" class="blood-type-btn bg-surface border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'A+')">A+</button>
+                                <button type="button" class="blood-type-btn bg-surface border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'A-')">A-</button>
+                                <button type="button" class="blood-type-btn bg-surface border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'B+')">B+</button>
+                                <button type="button" class="blood-type-btn bg-surface border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'B-')">B-</button>
+                                <button type="button" class="blood-type-btn bg-surface border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'O+')">O+</button>
+                                <button type="button" class="blood-type-btn bg-surface border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'O-')">O-</button>
+                                <button type="button" class="blood-type-btn bg-surface border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'AB+')">AB+</button>
+                                <button type="button" class="blood-type-btn bg-surface border-2 border-border hover:border-primary hover:bg-primary-50 text-text-primary font-semibold py-3 rounded-lg transition-medical-fast" onclick="selectBloodType(this, 'AB-')">AB-</button>
+                            </div>
+                        </div>
+
+                        <!-- Location Input -->
+                        <div>
+                            <label for="location" class="block text-sm font-semibold text-text-primary mb-2">Location</label>
+                            <div class="relative">
+                                <input type="text" id="location" name="location" placeholder="Enter city or use GPS" class="input-medical pr-12" value="Mumbai, Maharashtra" />
+                                <button type="button" class="absolute right-3 top-1/2 transform -translate-y-1/2 text-primary hover:text-primary-700 transition-medical-fast" onclick="detectLocation()">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Emergency Search Button -->
+                        <button type="submit" class="btn-emergency w-full animate-gentle-bounce">
+                            <svg class="w-6 h-6 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                            </svg>
+                            Find Blood Donors Now
+                        </button>
+                    </form>
+
+                    <!-- Quick Stats -->
+                    <div class="mt-6 pt-6 border-t border-border">
+                        <div class="flex justify-between text-sm">
+                            <span class="text-text-secondary">Available in Mumbai:</span>
+                            <span class="font-semibold text-accent-600">47 donors</span>
+                        </div>
+                        <div class="flex justify-between text-sm mt-2">
+                            <span class="text-text-secondary">Response time:</span>
+                            <span class="font-semibold text-secondary">< 15 minutes</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Primary Action Pathways -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Choose Your Path to Save Lives</h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Whether you need blood urgently, want to become a donor, or represent a healthcare institution, we have the right solution for you.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Find Blood Now -->
+                <div class="card-medical p-8 text-center hover:shadow-medical-floating transition-medical group">
+                    <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary-200 transition-medical">
+                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-4">Find Blood Now</h3>
+                    <p class="text-text-secondary mb-6">Emergency blood search with real-time availability across 500+ cities in India. Get connected with verified donors instantly.</p>
+                    <a href="emergency_blood_request_center.html" class="btn-primary w-full">Search Blood Donors</a>
+                </div>
+
+                <!-- Become a Donor -->
+                <div class="card-medical p-8 text-center hover:shadow-medical-floating transition-medical group">
+                    <div class="w-16 h-16 bg-secondary-100 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-secondary-200 transition-medical">
+                        <svg class="w-8 h-8 text-secondary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-4">Become a Donor</h3>
+                    <p class="text-text-secondary mb-6">Join 8,000+ verified donors making a difference. Quick registration, health tracking, and community recognition await you.</p>
+                    <a href="donor_registration_dashboard.html" class="btn-secondary w-full">Register as Donor</a>
+                </div>
+
+                <!-- Hospital Partnership -->
+                <div class="card-medical p-8 text-center hover:shadow-medical-floating transition-medical group">
+                    <div class="w-16 h-16 bg-surface-300 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-surface-200 transition-medical">
+                        <svg class="w-8 h-8 text-text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-text-primary mb-4">Hospital Partnership</h3>
+                    <p class="text-text-secondary mb-6">Professional blood bank management with inventory tracking, donor outreach, and emergency response coordination.</p>
+                    <a href="hospital_blood_bank_portal.html" class="bg-text-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-text-secondary transition-medical-fast w-full inline-block">Partner with Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Stories Carousel -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Stories That Inspire</h2>
+                <p class="text-xl text-text-secondary">Real people, real impact. Every donation creates a story worth sharing.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Success Story 1 -->
+                <div class="card-medical p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?q=80&w=2787&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Priya Sharma - Blood Donor" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Priya Sharma</h4>
+                            <p class="text-sm text-text-secondary">Regular Donor, Delhi</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"I've donated 12 times through R•N ResQ. The platform made it so easy to help others. Last month, I received a thank you message from a recipient's family - it was the most rewarding feeling ever."</p>
+                    <div class="flex items-center text-sm text-accent-600">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        12 donations • 3 lives saved
+                    </div>
+                </div>
+
+                <!-- Success Story 2 -->
+                <div class="card-medical p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Rajesh Kumar - Blood Recipient Family" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Rajesh Kumar</h4>
+                            <p class="text-sm text-text-secondary">Grateful Father, Mumbai</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"When my daughter needed emergency surgery, R•N ResQ connected us with 3 donors within 20 minutes. The platform literally saved her life. We're forever grateful to this community."</p>
+                    <div class="flex items-center text-sm text-primary">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"/>
+                        </svg>
+                        Life saved in 20 minutes
+                    </div>
+                </div>
+
+                <!-- Success Story 3 -->
+                <div class="card-medical p-6">
+                    <div class="flex items-center mb-4">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dr. Anjali Mehta - Hospital Partner" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <div>
+                            <h4 class="font-semibold text-text-primary">Dr. Anjali Mehta</h4>
+                            <p class="text-sm text-text-secondary">Apollo Hospital, Bangalore</p>
+                        </div>
+                    </div>
+                    <p class="text-text-secondary mb-4">"R•N ResQ has transformed our blood bank operations. The real-time inventory management and donor network has reduced our emergency response time by 60%. It's a game-changer for healthcare."</p>
+                    <div class="flex items-center text-sm text-secondary">
+                        <svg class="w-4 h-4 mr-1" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        60% faster response time
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Impact & Blood Availability Map -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Real-Time Blood Availability</h2>
+                <p class="text-xl text-text-secondary">Live inventory across major Indian cities. Updated every 15 minutes.</p>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Interactive Map Placeholder -->
+                <div class="relative">
+                    <div class="bg-surface-200 rounded-xl h-96 flex items-center justify-center relative overflow-hidden">
+                        <!-- India Map SVG -->
+                        <svg class="w-full h-full opacity-20" viewBox="0 0 400 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M100 50L150 40L200 60L250 50L300 70L320 100L310 150L290 200L250 220L200 210L150 200L120 180L90 150L80 100L100 50Z" fill="#DC2626"/>
+                        </svg>
+                        
+                        <!-- City Markers -->
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="relative w-full h-full">
+                                <!-- Mumbai -->
+                                <div class="absolute top-32 left-16 flex items-center">
+                                    <div class="w-4 h-4 bg-accent rounded-full animate-pulse"></div>
+                                    <div class="ml-2 bg-white px-2 py-1 rounded shadow-medical text-xs font-semibold">Mumbai: 47 donors</div>
+                                </div>
+                                <!-- Delhi -->
+                                <div class="absolute top-16 left-32 flex items-center">
+                                    <div class="w-4 h-4 bg-accent rounded-full animate-pulse"></div>
+                                    <div class="ml-2 bg-white px-2 py-1 rounded shadow-medical text-xs font-semibold">Delhi: 63 donors</div>
+                                </div>
+                                <!-- Bangalore -->
+                                <div class="absolute top-48 left-24 flex items-center">
+                                    <div class="w-4 h-4 bg-accent rounded-full animate-pulse"></div>
+                                    <div class="ml-2 bg-white px-2 py-1 rounded shadow-medical text-xs font-semibold">Bangalore: 38 donors</div>
+                                </div>
+                                <!-- Chennai -->
+                                <div class="absolute top-56 left-32 flex items-center">
+                                    <div class="w-4 h-4 bg-accent rounded-full animate-pulse"></div>
+                                    <div class="ml-2 bg-white px-2 py-1 rounded shadow-medical text-xs font-semibold">Chennai: 29 donors</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="location_intelligence_blood_availability_map.html" class="text-primary font-semibold hover:text-primary-700 transition-medical-fast">View Full Interactive Map →</a>
+                    </div>
+                </div>
+
+                <!-- City Statistics -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-text-primary mb-6">Blood Availability by City</h3>
+                    
+                    <!-- Mumbai -->
+                    <div class="card-medical p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-semibold text-text-primary">Mumbai, Maharashtra</h4>
+                            <span class="status-success">High Availability</span>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 text-sm">
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">A+: 12</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">B+: 8</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">O+: 15</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">AB+: 5</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Delhi -->
+                    <div class="card-medical p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-semibold text-text-primary">Delhi, NCR</h4>
+                            <span class="status-success">High Availability</span>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 text-sm">
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">A+: 18</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">B+: 12</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">O+: 20</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">AB+: 7</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bangalore -->
+                    <div class="card-medical p-4">
+                        <div class="flex justify-between items-center mb-2">
+                            <h4 class="font-semibold text-text-primary">Bangalore, Karnataka</h4>
+                            <span class="status-warning">Medium Availability</span>
+                        </div>
+                        <div class="grid grid-cols-4 gap-2 text-sm">
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">A+: 9</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">B+: 6</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">O+: 11</div>
+                            </div>
+                            <div class="text-center">
+                                <div class="font-semibold text-primary">AB+: 3</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hospital Partnerships -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl lg:text-4xl font-bold text-text-primary mb-4">Trusted by Leading Healthcare Institutions</h2>
+                <p class="text-xl text-text-secondary">156 partner hospitals across India trust R•N ResQ for their blood bank management</p>
+            </div>
+
+            <!-- Hospital Logos Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center opacity-60">
+                <!-- Apollo Hospitals -->
+                <div class="flex items-center justify-center h-16">
+                    <div class="text-lg font-bold text-text-primary">APOLLO</div>
+                </div>
+                <!-- Fortis Healthcare -->
+                <div class="flex items-center justify-center h-16">
+                    <div class="text-lg font-bold text-text-primary">FORTIS</div>
+                </div>
+                <!-- Max Healthcare -->
+                <div class="flex items-center justify-center h-16">
+                    <div class="text-lg font-bold text-text-primary">MAX</div>
+                </div>
+                <!-- Manipal Hospitals -->
+                <div class="flex items-center justify-center h-16">
+                    <div class="text-lg font-bold text-text-primary">MANIPAL</div>
+                </div>
+                <!-- AIIMS -->
+                <div class="flex items-center justify-center h-16">
+                    <div class="text-lg font-bold text-text-primary">AIIMS</div>
+                </div>
+                <!-- Medanta -->
+                <div class="flex items-center justify-center h-16">
+                    <div class="text-lg font-bold text-text-primary">MEDANTA</div>
+                </div>
+            </div>
+
+            <!-- Certifications -->
+            <div class="mt-12 text-center">
+                <h3 class="text-xl font-semibold text-text-primary mb-6">Medical Certifications & Compliance</h3>
+                <div class="flex flex-wrap justify-center gap-6">
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-medical">
+                        <svg class="w-6 h-6 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-sm font-medium text-text-primary">ISO 27001 Certified</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-medical">
+                        <svg class="w-6 h-6 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-sm font-medium text-text-primary">HIPAA Compliant</span>
+                    </div>
+                    <div class="flex items-center bg-white px-4 py-2 rounded-lg shadow-medical">
+                        <svg class="w-6 h-6 text-accent mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        <span class="text-sm font-medium text-text-primary">MoHFW Approved</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-auto mr-3" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" fill="#DC2626" opacity="0.2"/>
+                            <path d="M12 20L18 14L24 20L18 26L12 20Z" fill="#DC2626"/>
+                            <path d="M16 16H20V24H16V16Z" fill="white"/>
+                            <path d="M14 18H22V22H14V18Z" fill="white"/>
+                        </svg>
+                        <div>
+                            <div class="text-xl font-bold text-primary">R•N ResQ</div>
+                            <div class="text-sm text-gray-300">Every drop counts, every donor matters</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        India's most trusted blood donation platform connecting donors with those in need. 
+                        Join our community of life-savers and make a difference today.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.222.085.343-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z.017-.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="donor_registration_dashboard.html" class="text-gray-300 hover:text-primary transition-medical-fast">Become a Donor</a></li>
+                        <li><a href="emergency_blood_request_center.html" class="text-gray-300 hover:text-primary transition-medical-fast">Request Blood</a></li>
+                        <li><a href="hospital_blood_bank_portal.html" class="text-gray-300 hover:text-primary transition-medical-fast">Hospital Portal</a></li>
+                        <li><a href="location_intelligence_blood_availability_map.html" class="text-gray-300 hover:text-primary transition-medical-fast">Blood Availability Map</a></li>
+                        <li><a href="medical_resource_education_center.html" class="text-gray-300 hover:text-primary transition-medical-fast">Medical Resources</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Emergency Contact</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <a href="tel:+911800123456" class="text-gray-300 hover:text-primary transition-medical-fast">1800-123-456</a>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <a href="mailto:help@rnresq.com" class="text-gray-300 hover:text-primary transition-medical-fast">help@rnresq.com</a>
+                        </div>
+                        <div class="text-gray-300 text-sm mt-4">
+                            Available 24/7 for emergencies
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 R•N ResQ. All Rights Reserved. | Saving lives through technology and compassion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Blood type selection
+        let selectedBloodType = '';
+        function selectBloodType(button, bloodType) {
+            // Remove active class from all buttons
+            document.querySelectorAll('.blood-type-btn').forEach(btn => {
+                btn.classList.remove('border-primary', 'bg-primary-50', 'text-primary');
+                btn.classList.add('border-border', 'bg-surface', 'text-text-primary');
+            });
+            
+            // Add active class to selected button
+            button.classList.remove('border-border', 'bg-surface', 'text-text-primary');
+            button.classList.add('border-primary', 'bg-primary-50', 'text-primary');
+            
+            selectedBloodType = bloodType;
+        }
+
+        // GPS location detection
+        function detectLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    // Simulate reverse geocoding
+                    const locationInput = document.getElementById('location');
+                    locationInput.value = 'Current Location (GPS)';
+                    locationInput.classList.add('text-accent-600');
+                }, function(error) {
+                    alert('Unable to detect location. Please enter manually.');
+                });
+            } else {
+                alert('Geolocation is not supported by this browser.');
+            }
+        }
+
+        // Emergency search form submission
+        function handleEmergencySearch(event) {
+            event.preventDefault();
+            
+            if (!selectedBloodType) {
+                alert('Please select a blood type');
+                return;
+            }
+            
+            const location = document.getElementById('location').value;
+            if (!location.trim()) {
+                alert('Please enter a location');
+                return;
+            }
+            
+            // Simulate search and redirect
+            alert(`Searching for ${selectedBloodType} blood donors in ${location}...`);
+            // In a real app, this would redirect to search results
+            window.location.href = 'emergency_blood_request_center.html';
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-select O+ as it's most common
+            const oPlusButton = document.querySelector('[onclick*="O+"]');
+            if (oPlusButton) {
+                selectBloodType(oPlusButton, 'O+');
+            }
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>

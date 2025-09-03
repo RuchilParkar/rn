@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital & Blood Bank Portal - R•N ResQ | Professional Healthcare Management</title>
+    <meta name="description" content="Comprehensive blood bank management portal for healthcare professionals. Real-time inventory tracking, donor outreach, and emergency coordination tools." />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Frnresq1902back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.8"></script>
+</head>
+<body class="bg-background font-inter">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-medical sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-10 w-auto" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" fill="#DC2626" opacity="0.1"/>
+                            <path d="M12 20L18 14L24 20L18 26L12 20Z" fill="#DC2626"/>
+                            <path d="M16 16H20V24H16V16Z" fill="white"/>
+                            <path d="M14 18H22V22H14V18Z" fill="white"/>
+                            <text x="35" y="16" font-family="Inter" font-weight="700" font-size="14" fill="#DC2626">R•N</text>
+                            <text x="35" y="30" font-family="Inter" font-weight="600" font-size="12" fill="#1E40AF">ResQ</text>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="homepage_emergency_blood_search_hub.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="donor_registration_dashboard.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Become Donor</a>
+                        <a href="emergency_blood_request_center.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Request Blood</a>
+                        <a href="hospital_blood_bank_portal.html" class="text-primary font-semibold px-3 py-2 rounded-md text-sm">Hospital Portal</a>
+                        <a href="medical_resource_education_center.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Resources</a>
+                        <a href="location_intelligence_blood_availability_map.html" class="text-text-secondary hover:text-primary transition-medical-fast px-3 py-2 rounded-md text-sm font-medium">Blood Map</a>
+                    </div>
+                </div>
+
+                <!-- Emergency Contact -->
+                <div class="hidden md:flex items-center">
+                    <a href="tel:+911800123456" class="bg-primary text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-primary-700 transition-medical-fast flex items-center">
+                        <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                        Emergency: 1800-123-456
+                    </a>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button type="button" class="text-text-secondary hover:text-primary focus:outline-none focus:text-primary transition-medical-fast" onclick="toggleMobileMenu()">
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t border-border">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="homepage_emergency_blood_search_hub.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="donor_registration_dashboard.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Become Donor</a>
+                <a href="emergency_blood_request_center.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Request Blood</a>
+                <a href="hospital_blood_bank_portal.html" class="text-primary font-semibold block px-3 py-2 rounded-md text-base">Hospital Portal</a>
+                <a href="medical_resource_education_center.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Resources</a>
+                <a href="location_intelligence_blood_availability_map.html" class="text-text-secondary hover:text-primary block px-3 py-2 rounded-md text-base font-medium">Blood Map</a>
+                <a href="tel:+911800123456" class="bg-primary text-white block px-3 py-2 rounded-md text-base font-semibold mt-4">Emergency: 1800-123-456</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hospital Portal Header -->
+    <section class="bg-gradient-to-br from-secondary-50 via-white to-primary-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl lg:text-5xl font-bold text-text-primary mb-4">Hospital & Blood Bank Portal</h1>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">Professional healthcare management tools for inventory tracking, donor outreach, and emergency coordination</p>
+            </div>
+
+            <!-- Quick Stats Dashboard -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="card-medical p-6 text-center">
+                    <div class="text-3xl font-bold text-primary mb-2">847</div>
+                    <div class="text-sm text-text-secondary font-medium">Total Units Available</div>
+                </div>
+                <div class="card-medical p-6 text-center">
+                    <div class="text-3xl font-bold text-accent-600 mb-2">23</div>
+                    <div class="text-sm text-text-secondary font-medium">Critical Shortage Alerts</div>
+                </div>
+                <div class="card-medical p-6 text-center">
+                    <div class="text-3xl font-bold text-secondary mb-2">156</div>
+                    <div class="text-sm text-text-secondary font-medium">Scheduled Appointments</div>
+                </div>
+                <div class="card-medical p-6 text-center">
+                    <div class="text-3xl font-bold text-warning-600 mb-2">12</div>
+                    <div class="text-sm text-text-secondary font-medium">Units Expiring Soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-Time Blood Inventory Management -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-text-primary mb-2">Real-Time Blood Inventory</h2>
+                    <p class="text-text-secondary">Live stock levels with expiration tracking and automated alerts</p>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="btn-outline" onclick="refreshInventory()">
+                        <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                        </svg>
+                        Refresh
+                    </button>
+                    <button class="btn-primary" onclick="generateReport()">
+                        <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                        Export Report
+                    </button>
+                </div>
+            </div>
+
+            <!-- Blood Type Inventory Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <!-- A+ Blood Type -->
+                <div class="card-medical p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">A+</h3>
+                            <p class="text-sm text-text-secondary">Most Common</p>
+                        </div>
+                        <span class="status-success">Adequate</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-text-secondary">Available Units:</span>
+                            <span class="font-semibold text-text-primary">127 units</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-text-secondary">Expiring in 7 days:</span>
+                            <span class="font-semibold text-warning-600">3 units</span>
+                        </div>
+                        <div class="progress-medical">
+                            <div class="progress-medical-bar" style="width: 75%"></div>
+                        </div>
+                        <div class="text-xs text-text-tertiary">75% of target stock</div>
+                    </div>
+                </div>
+
+                <!-- O+ Blood Type -->
+                <div class="card-medical p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">O+</h3>
+                            <p class="text-sm text-text-secondary">Universal Donor</p>
+                        </div>
+                        <span class="status-warning">Low Stock</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-text-secondary">Available Units:</span>
+                            <span class="font-semibold text-text-primary">43 units</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-text-secondary">Expiring in 7 days:</span>
+                            <span class="font-semibold text-warning-600">2 units</span>
+                        </div>
+                        <div class="progress-medical">
+                            <div class="progress-medical-bar bg-warning-600" style="width: 35%"></div>
+                        </div>
+                        <div class="text-xs text-text-tertiary">35% of target stock</div>
+                    </div>
+                </div>
+
+                <!-- B+ Blood Type -->
+                <div class="card-medical p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">B+</h3>
+                            <p class="text-sm text-text-secondary">Common Type</p>
+                        </div>
+                        <span class="status-success">Good</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-text-secondary">Available Units:</span>
+                            <span class="font-semibold text-text-primary">89 units</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-text-secondary">Expiring in 7 days:</span>
+                            <span class="font-semibold text-warning-600">1 unit</span>
+                        </div>
+                        <div class="progress-medical">
+                            <div class="progress-medical-bar" style="width: 65%"></div>
+                        </div>
+                        <div class="text-xs text-text-tertiary">65% of target stock</div>
+                    </div>
+                </div>
+
+                <!-- AB+ Blood Type -->
+                <div class="card-medical p-6">
+                    <div class="flex justify-between items-start mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-primary">AB+</h3>
+                            <p class="text-sm text-text-secondary">Universal Recipient</p>
+                        </div>
+                        <span class="status-error">Critical</span>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex justify-between">
+                            <span class="text-sm text-text-secondary">Available Units:</span>
+                            <span class="font-semibold text-text-primary">8 units</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="text-sm text-text-secondary">Expiring in 7 days:</span>
+                            <span class="font-semibold text-warning-600">1 unit</span>
+                        </div>
+                        <div class="progress-medical">
+                            <div class="progress-medical-bar bg-error-600" style="width: 15%"></div>
+                        </div>
+                        <div class="text-xs text-text-tertiary">15% of target stock</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Critical Alerts -->
+            <div class="card-critical p-6">
+                <div class="flex items-center mb-4">
+                    <svg class="w-6 h-6 text-primary mr-3" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                    </svg>
+                    <h3 class="text-lg font-semibold text-text-primary">Critical Stock Alerts</h3>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div class="bg-error-50 border border-error-200 rounded-lg p-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="font-semibold text-error-700">AB+ Blood Critical</h4>
+                                <p class="text-sm text-error-600">Only 8 units remaining - Below minimum threshold</p>
+                            </div>
+                            <button class="btn-emergency text-sm px-4 py-2" onclick="sendEmergencyAlert('AB+')">Send Alert</button>
+                        </div>
+                    </div>
+                    <div class="bg-warning-50 border border-warning-200 rounded-lg p-4">
+                        <div class="flex justify-between items-center">
+                            <div>
+                                <h4 class="font-semibold text-warning-700">O+ Blood Low Stock</h4>
+                                <p class="text-sm text-warning-600">43 units remaining - Approaching minimum</p>
+                            </div>
+                            <button class="bg-warning-600 text-white px-4 py-2 rounded-lg font-semibold text-sm hover:bg-warning-700 transition-medical-fast" onclick="scheduleOutreach('O+')">Schedule Outreach</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Donor Outreach Campaign Management -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-text-primary mb-2">Donor Outreach Campaigns</h2>
+                    <p class="text-text-secondary">Customizable templates with response tracking and appointment integration</p>
+                </div>
+                <button class="btn-primary" onclick="createCampaign()">
+                    <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+                    </svg>
+                    Create Campaign
+                </button>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Active Campaigns -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-xl font-semibold text-text-primary mb-6">Active Campaigns</h3>
+                    <div class="space-y-6">
+                        <!-- Campaign 1 -->
+                        <div class="card-medical p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h4 class="text-lg font-semibold text-text-primary">AB+ Emergency Drive</h4>
+                                    <p class="text-sm text-text-secondary">Launched: Aug 20, 2025 • Target: 50 donors</p>
+                                </div>
+                                <span class="status-warning">Active</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 mb-4">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary">247</div>
+                                    <div class="text-xs text-text-secondary">SMS Sent</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-accent-600">23</div>
+                                    <div class="text-xs text-text-secondary">Responses</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-secondary">12</div>
+                                    <div class="text-xs text-text-secondary">Appointments</div>
+                                </div>
+                            </div>
+                            <div class="progress-medical mb-4">
+                                <div class="progress-medical-bar" style="width: 24%"></div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-text-secondary">24% response rate</span>
+                                <div class="flex space-x-2">
+                                    <button class="text-primary hover:text-primary-700 text-sm font-medium" onclick="viewCampaignDetails('ab-emergency')">View Details</button>
+                                    <button class="text-text-secondary hover:text-text-primary text-sm font-medium" onclick="pauseCampaign('ab-emergency')">Pause</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Campaign 2 -->
+                        <div class="card-medical p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div>
+                                    <h4 class="text-lg font-semibold text-text-primary">Monthly O+ Collection</h4>
+                                    <p class="text-sm text-text-secondary">Launched: Aug 15, 2025 • Target: 100 donors</p>
+                                </div>
+                                <span class="status-success">Performing Well</span>
+                            </div>
+                            <div class="grid grid-cols-3 gap-4 mb-4">
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-primary">456</div>
+                                    <div class="text-xs text-text-secondary">Emails Sent</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-accent-600">89</div>
+                                    <div class="text-xs text-text-secondary">Responses</div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="text-2xl font-bold text-secondary">67</div>
+                                    <div class="text-xs text-text-secondary">Appointments</div>
+                                </div>
+                            </div>
+                            <div class="progress-medical mb-4">
+                                <div class="progress-medical-bar" style="width: 67%"></div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-sm text-text-secondary">67% response rate</span>
+                                <div class="flex space-x-2">
+                                    <button class="text-primary hover:text-primary-700 text-sm font-medium" onclick="viewCampaignDetails('monthly-o')">View Details</button>
+                                    <button class="text-text-secondary hover:text-text-primary text-sm font-medium" onclick="duplicateCampaign('monthly-o')">Duplicate</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Campaign Templates -->
+                <div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-6">Quick Templates</h3>
+                    <div class="space-y-4">
+                        <div class="card-medical p-4 hover:shadow-medical-floating transition-medical cursor-pointer" onclick="useTemplate('emergency')">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 text-primary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                </svg>
+                                <h4 class="font-semibold text-text-primary">Emergency Alert</h4>
+                            </div>
+                            <p class="text-sm text-text-secondary">Urgent blood shortage notification with immediate action required</p>
+                        </div>
+
+                        <div class="card-medical p-4 hover:shadow-medical-floating transition-medical cursor-pointer" onclick="useTemplate('routine')">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 text-accent-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                                </svg>
+                                <h4 class="font-semibold text-text-primary">Routine Collection</h4>
+                            </div>
+                            <p class="text-sm text-text-secondary">Regular donation drive invitation with flexible scheduling</p>
+                        </div>
+
+                        <div class="card-medical p-4 hover:shadow-medical-floating transition-medical cursor-pointer" onclick="useTemplate('appreciation')">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 text-secondary mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
+                                </svg>
+                                <h4 class="font-semibold text-text-primary">Donor Appreciation</h4>
+                            </div>
+                            <p class="text-sm text-text-secondary">Thank you message with impact statistics and recognition</p>
+                        </div>
+
+                        <div class="card-medical p-4 hover:shadow-medical-floating transition-medical cursor-pointer" onclick="useTemplate('followup')">
+                            <div class="flex items-center mb-2">
+                                <svg class="w-5 h-5 text-warning-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd"/>
+                                </svg>
+                                <h4 class="font-semibold text-text-primary">Follow-up Reminder</h4>
+                            </div>
+                            <p class="text-sm text-text-secondary">Gentle reminder for donors who haven't responded to initial outreach</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Management System -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-text-primary mb-2">Appointment Management</h2>
+                    <p class="text-text-secondary">Calendar integration with donor communication and no-show tracking</p>
+                </div>
+                <div class="flex space-x-4">
+                    <button class="btn-outline" onclick="viewCalendar()">
+                        <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
+                        </svg>
+                        Calendar View
+                    </button>
+                    <button class="btn-primary" onclick="scheduleAppointment()">
+                        <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+                        </svg>
+                        Schedule Appointment
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Today's Appointments -->
+                <div class="lg:col-span-2">
+                    <h3 class="text-xl font-semibold text-text-primary mb-6">Today's Schedule - August 24, 2025</h3>
+                    <div class="space-y-4">
+                        <!-- Appointment 1 -->
+                        <div class="card-medical p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex items-center">
+                                    <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Rahul Sharma" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary">Rahul Sharma</h4>
+                                        <p class="text-sm text-text-secondary">Blood Type: O+ • Phone: +91 98765 43210</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-lg font-semibold text-text-primary">10:00 AM</div>
+                                    <span class="status-success">Confirmed</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="text-sm text-text-secondary">
+                                    Last donation: June 15, 2025 • Total donations: 8
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="text-primary hover:text-primary-700 text-sm font-medium" onclick="contactDonor('rahul-sharma')">Contact</button>
+                                    <button class="text-text-secondary hover:text-text-primary text-sm font-medium" onclick="rescheduleAppointment('rahul-sharma')">Reschedule</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Appointment 2 -->
+                        <div class="card-medical p-6">
+                            <div class="flex justify-between items-start mb-4">
+                                <div class="flex items-center">
+                                    <img src="https://images.pixabay.com/photo/2016/11/21/12/42/beard-1845166_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Priya Patel" class="w-12 h-12 rounded-full object-cover mr-4" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                                    <div>
+                                        <h4 class="font-semibold text-text-primary">Priya Patel</h4>
+                                        <p class="text-sm text-text-secondary">Blood Type: A+ • Phone: +91 87654 32109</p>
+                                    </div>
+                                </div>
+                                <div class="text-right">
+                                    <div class="text-lg font-semibold text-text-primary">11:30 AM</div>
+                                    <span class="status-warning">Pending</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="text-sm text-text-secondary">
+                                    First-time donor • Completed eligibility screening
+                                </div>
+                                <div class="flex space-x-2">
+                                    <button class="text-primary hover:text-primary-700 text-sm font-medium" onclick="contactDonor('priya-patel')">Contact</button>
+                                    <button class="text-accent-600 hover:text-accent-700 text-sm font-medium" onclick="confirmAppointment('priya-patel')">Confirm</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appointment Statistics -->
+                <div>
+                    <h3 class="text-xl font-semibold text-text-primary mb-6">Appointment Analytics</h3>
+                    <div class="space-y-6">
+                        <!-- Weekly Stats -->
+                        <div class="card-medical p-6">
+                            <h4 class="font-semibold text-text-primary mb-4">This Week</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-text-secondary">Total Scheduled:</span>
+                                    <span class="font-semibold text-text-primary">47</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-text-secondary">Completed:</span>
+                                    <span class="font-semibold text-accent-600">38</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-text-secondary">No-shows:</span>
+                                    <span class="font-semibold text-warning-600">6</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-sm text-text-secondary">Cancelled:</span>
+                                    <span class="font-semibold text-text-secondary">3</span>
+                                </div>
+                            </div>
+                            <div class="mt-4 pt-4 border-t border-border">
+                                <div class="flex justify-between">
+                                    <span class="text-sm font-medium text-text-primary">Success Rate:</span>
+                                    <span class="font-bold text-accent-600">81%</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- No-show Follow-up -->
+                        <div class="card-medical p-6">
+                            <h4 class="font-semibold text-text-primary mb-4">Follow-up Required</h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <div class="text-sm font-medium text-text-primary">Amit Kumar</div>
+                                        <div class="text-xs text-text-secondary">No-show yesterday</div>
+                                    </div>
+                                    <button class="text-primary hover:text-primary-700 text-xs font-medium" onclick="followUpDonor('amit-kumar')">Follow-up</button>
+                                </div>
+                                <div class="flex justify-between items-center">
+                                    <div>
+                                        <div class="text-sm font-medium text-text-primary">Sneha Reddy</div>
+                                        <div class="text-xs text-text-secondary">Cancelled last minute</div>
+                                    </div>
+                                    <button class="text-primary hover:text-primary-700 text-xs font-medium" onclick="followUpDonor('sneha-reddy')">Follow-up</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Quick Actions -->
+                        <div class="card-medical p-6">
+                            <h4 class="font-semibold text-text-primary mb-4">Quick Actions</h4>
+                            <div class="space-y-2">
+                                <button class="w-full text-left px-3 py-2 text-sm text-text-secondary hover:bg-surface hover:text-text-primary rounded transition-medical-fast" onclick="sendReminders()">Send Daily Reminders</button>
+                                <button class="w-full text-left px-3 py-2 text-sm text-text-secondary hover:bg-surface hover:text-text-primary rounded transition-medical-fast" onclick="generateScheduleReport()">Generate Schedule Report</button>
+                                <button class="w-full text-left px-3 py-2 text-sm text-text-secondary hover:bg-surface hover:text-text-primary rounded transition-medical-fast" onclick="bulkReschedule()">Bulk Reschedule</button>
+                                <button class="w-full text-left px-3 py-2 text-sm text-text-secondary hover:bg-surface hover:text-text-primary rounded transition-medical-fast" onclick="exportCalendar()">Export to Calendar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Analytics & Reporting Dashboard -->
+    <section class="py-16 bg-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center mb-8">
+                <div>
+                    <h2 class="text-3xl font-bold text-text-primary mb-2">Analytics & Insights</h2>
+                    <p class="text-text-secondary">Donation patterns, seasonal trends, and demographic data for optimization</p>
+                </div>
+                <div class="flex space-x-4">
+                    <select class="input-medical w-auto" onchange="updateAnalyticsPeriod(this.value)">
+                        <option value="7days">Last 7 Days</option>
+                        <option value="30days" selected>Last 30 Days</option>
+                        <option value="90days">Last 90 Days</option>
+                        <option value="1year">Last Year</option>
+                    </select>
+                    <button class="btn-outline" onclick="exportAnalytics()">
+                        <svg class="w-5 h-5 inline mr-2" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                        </svg>
+                        Export Report
+                    </button>
+                </div>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-8 mb-8">
+                <!-- Donation Trends Chart -->
+                <div class="card-medical p-6">
+                    <h3 class="text-lg font-semibold text-text-primary mb-4">Monthly Donation Trends</h3>
+                    <div class="h-64 bg-surface-200 rounded-lg flex items-center justify-center relative">
+                        <!-- Chart Placeholder -->
+                        <svg class="w-full h-full" viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="donationGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#DC2626;stop-opacity:0.3"/>
+                                    <stop offset="100%" style="stop-color:#DC2626;stop-opacity:0.1"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Grid lines -->
+                            <g stroke="#E5E7EB" stroke-width="1" opacity="0.5">
+                                <line x1="50" y1="20" x2="50" y2="180"/>
+                                <line x1="100" y1="20" x2="100" y2="180"/>
+                                <line x1="150" y1="20" x2="150" y2="180"/>
+                                <line x1="200" y1="20" x2="200" y2="180"/>
+                                <line x1="250" y1="20" x2="250" y2="180"/>
+                                <line x1="300" y1="20" x2="300" y2="180"/>
+                                <line x1="350" y1="20" x2="350" y2="180"/>
+                            </g>
+                            <!-- Data line -->
+                            <polyline fill="url(#donationGradient)" stroke="#DC2626" stroke-width="3" points="50,150 100,120 150,140 200,100 250,110 300,80 350,90"/>
+                            <!-- Data points -->
+                            <circle cx="50" cy="150" r="4" fill="#DC2626"/>
+                            <circle cx="100" cy="120" r="4" fill="#DC2626"/>
+                            <circle cx="150" cy="140" r="4" fill="#DC2626"/>
+                            <circle cx="200" cy="100" r="4" fill="#DC2626"/>
+                            <circle cx="250" cy="110" r="4" fill="#DC2626"/>
+                            <circle cx="300" cy="80" r="4" fill="#DC2626"/>
+                            <circle cx="350" cy="90" r="4" fill="#DC2626"/>
+                        </svg>
+                        <div class="absolute bottom-2 left-2 text-xs text-text-tertiary">
+                            Jan - Jul 2025
+                        </div>
+                    </div>
+                    <div class="mt-4 flex justify-between text-sm">
+                        <div class="text-center">
+                            <div class="font-semibold text-accent-600">↑ 23%</div>
+                            <div class="text-text-secondary">vs last month</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-semibold text-text-primary">847</div>
+                            <div class="text-text-secondary">Total donations</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Blood Type Distribution -->
+                <div class="card-medical p-6">
+                    <h3 class="text-lg font-semibold text-text-primary mb-4">Blood Type Distribution</h3>
+                    <div class="h-64 flex items-center justify-center relative">
+                        <!-- Pie Chart Placeholder -->
+                        <svg class="w-48 h-48" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <!-- O+ (35%) -->
+                            <path d="M 100 100 L 100 50 A 50 50 0 0 1 135.36 67.68 Z" fill="#DC2626"/>
+                            <!-- A+ (30%) -->
+                            <path d="M 100 100 L 135.36 67.68 A 50 50 0 0 1 135.36 132.32 Z" fill="#059669"/>
+                            <!-- B+ (20%) -->
+                            <path d="M 100 100 L 135.36 132.32 A 50 50 0 0 1 100 150 Z" fill="#1E40AF"/>
+                            <!-- AB+ (8%) -->
+                            <path d="M 100 100 L 100 150 A 50 50 0 0 1 82.32 135.36 Z" fill="#F59E0B"/>
+                            <!-- Others (7%) -->
+                            <path d="M 100 100 L 82.32 135.36 A 50 50 0 0 1 100 50 Z" fill="#6B7280"/>
+                        </svg>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 text-sm">
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-primary rounded mr-2"></div>
+                            <span>O+ (35%)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-accent rounded mr-2"></div>
+                            <span>A+ (30%)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-secondary rounded mr-2"></div>
+                            <span>B+ (20%)</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-3 h-3 bg-warning rounded mr-2"></div>
+                            <span>AB+ (8%)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Performance Indicators -->
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="card-medical p-6 text-center">
+                    <div class="text-3xl font-bold text-primary mb-2">92%</div>
+                    <div class="text-sm text-text-secondary font-medium">Donor Retention Rate</div>
+                    <div class="text-xs text-accent-600 mt-1">↑ 5% from last quarter</div>
+                </div>
+                <div class="card-medical p-6 text-center">
+                    <div class="text-3xl font-bold text-accent-600 mb-2">4.2</div>
+                    <div class="text-sm text-text-secondary font-medium">Avg. Donations per Donor</div>
+                    <div class="text-xs text-accent-600 mt-1">↑ 0.3 from last quarter</div>
+                </div>
+                <div class="card-medical p-6 text-center">
+                    <div class="text-3xl font-bold text-secondary mb-2">18</div>
+                    <div class="text-sm text-text-secondary font-medium">Avg. Response Time (min)</div>
+                    <div class="text-xs text-accent-600 mt-1">↓ 2 min improvement</div>
+                </div>
+                <div class="card-medical p-6 text-center">
+                    <div class="text-3xl font-bold text-warning-600 mb-2">3.2%</div>
+                    <div class="text-sm text-text-secondary font-medium">Wastage Rate</div>
+                    <div class="text-xs text-accent-600 mt-1">↓ 0.8% improvement</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-text-primary text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center mb-4">
+                        <svg class="h-8 w-auto mr-3" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="18" fill="#DC2626" opacity="0.2"/>
+                            <path d="M12 20L18 14L24 20L18 26L12 20Z" fill="#DC2626"/>
+                            <path d="M16 16H20V24H16V16Z" fill="white"/>
+                            <path d="M14 18H22V22H14V18Z" fill="white"/>
+                        </svg>
+                        <div>
+                            <div class="text-xl font-bold text-primary">R•N ResQ</div>
+                            <div class="text-sm text-gray-300">Every drop counts, every donor matters</div>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 mb-4 max-w-md">
+                        India's most trusted blood donation platform connecting donors with those in need. 
+                        Join our community of life-savers and make a difference today.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                            </svg>
+                        </a>
+                        <a href="javascript:void(0)" class="text-gray-300 hover:text-primary transition-medical-fast">
+                            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.222.085.343-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z.017-.001z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="donor_registration_dashboard.html" class="text-gray-300 hover:text-primary transition-medical-fast">Become a Donor</a></li>
+                        <li><a href="emergency_blood_request_center.html" class="text-gray-300 hover:text-primary transition-medical-fast">Request Blood</a></li>
+                        <li><a href="hospital_blood_bank_portal.html" class="text-gray-300 hover:text-primary transition-medical-fast">Hospital Portal</a></li>
+                        <li><a href="location_intelligence_blood_availability_map.html" class="text-gray-300 hover:text-primary transition-medical-fast">Blood Availability Map</a></li>
+                        <li><a href="medical_resource_education_center.html" class="text-gray-300 hover:text-primary transition-medical-fast">Medical Resources</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Emergency Contact</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                            </svg>
+                            <a href="tel:+911800123456" class="text-gray-300 hover:text-primary transition-medical-fast">1800-123-456</a>
+                        </div>
+                        <div class="flex items-center">
+                            <svg class="w-5 h-5 mr-2 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                            </svg>
+                            <a href="mailto:help@rnresq.com" class="text-gray-300 hover:text-primary transition-medical-fast">help@rnresq.com</a>
+                        </div>
+                        <div class="text-gray-300 text-sm mt-4">
+                            Available 24/7 for emergencies
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center">
+                <p class="text-gray-300">&copy; 2025 R•N ResQ. All Rights Reserved. | Saving lives through technology and compassion.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        }
+
+        // Inventory Management Functions
+        function refreshInventory() {
+            alert('Refreshing inventory data...');
+            // Simulate refresh
+            setTimeout(() => {
+                alert('Inventory updated successfully!');
+            }, 1000);
+        }
+
+        function generateReport() {
+            alert('Generating inventory report...');
+            // Simulate report generation
+        }
+
+        function sendEmergencyAlert(bloodType) {
+            alert(`Sending emergency alert for ${bloodType} blood shortage to all registered donors in the area...`);
+        }
+
+        function scheduleOutreach(bloodType) {
+            alert(`Scheduling outreach campaign for ${bloodType} donors...`);
+        }
+
+        // Campaign Management Functions
+        function createCampaign() {
+            alert('Opening campaign creation wizard...');
+        }
+
+        function viewCampaignDetails(campaignId) {
+            alert(`Viewing details for campaign: ${campaignId}`);
+        }
+
+        function pauseCampaign(campaignId) {
+            if (confirm('Are you sure you want to pause this campaign?')) {
+                alert(`Campaign ${campaignId} has been paused.`);
+            }
+        }
+
+        function duplicateCampaign(campaignId) {
+            alert(`Creating duplicate of campaign: ${campaignId}`);
+        }
+
+        function useTemplate(templateType) {
+            alert(`Using ${templateType} template for new campaign...`);
+        }
+
+        // Appointment Management Functions
+        function viewCalendar() {
+            alert('Opening calendar view...');
+        }
+
+        function scheduleAppointment() {
+            alert('Opening appointment scheduling form...');
+        }
+
+        function contactDonor(donorId) {
+            alert(`Contacting donor: ${donorId}`);
+        }
+
+        function rescheduleAppointment(donorId) {
+            alert(`Rescheduling appointment for: ${donorId}`);
+        }
+
+        function confirmAppointment(donorId) {
+            alert(`Confirming appointment for: ${donorId}`);
+        }
+
+        function followUpDonor(donorId) {
+            alert(`Sending follow-up message to: ${donorId}`);
+        }
+
+        function sendReminders() {
+            alert('Sending daily appointment reminders...');
+        }
+
+        function generateScheduleReport() {
+            alert('Generating schedule report...');
+        }
+
+        function bulkReschedule() {
+            alert('Opening bulk reschedule tool...');
+        }
+
+        function exportCalendar() {
+            alert('Exporting calendar data...');
+        }
+
+        // Analytics Functions
+        function updateAnalyticsPeriod(period) {
+            alert(`Updating analytics for: ${period}`);
+        }
+
+        function exportAnalytics() {
+            alert('Exporting analytics report...');
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Simulate real-time updates
+            setInterval(() => {
+                // Update timestamps or counters if needed
+            }, 30000);
+        });
+    </script>
+<script id="dhws-dataInjector" src="../public/dhws-data-injector.js"></script>
+</body>
+</html>
